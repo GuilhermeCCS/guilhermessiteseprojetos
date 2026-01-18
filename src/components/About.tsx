@@ -8,7 +8,7 @@ const About = () => {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="section-title mb-4">Quem Sou</h2>
-            <div className="gold-divider" />
+            <div className="cyber-divider" />
           </div>
 
           {/* Main Content */}
@@ -16,31 +16,31 @@ const About = () => {
             {/* Text Content - Spans 2 columns */}
             <div className="lg:col-span-2 space-y-6">
               <p className="text-lg text-foreground leading-relaxed font-sans">
-                Olá! Sou <strong className="text-charcoal font-semibold">Guilherme Cruz da Silva</strong>, 
+                Olá! Sou <strong className="text-primary font-semibold">Guilherme Cruz da Silva</strong>, 
                 desenvolvedor web em formação (T.I.) e apaixonado por tecnologia. 
                 Aos 22 anos, dedico meu conhecimento técnico para ajudar profissionais 
                 a se destacarem na internet.
               </p>
               
-              <p className="text-lg text-foreground leading-relaxed font-sans">
+              <p className="text-lg text-muted-foreground leading-relaxed font-sans">
                 Meu foco vai além do código: crio ferramentas que resolvem problemas. 
                 Tenho experiência no desenvolvimento de sistemas de agendamento práticos 
                 e sites jurídicos que respeitam a sobriedade da profissão.
               </p>
 
-              <p className="text-lg text-accent font-serif italic">
+              <p className="text-lg text-primary font-semibold">
                 Vamos construir sua presença digital juntos?
               </p>
             </div>
 
             {/* Stats/Highlights */}
             <div className="space-y-6">
-              <div className="flex items-start gap-4 p-4 bg-secondary/50 rounded-lg">
-                <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                  <Code className="w-5 h-5 text-accent" />
+              <div className="flex items-start gap-4 p-4 glass-card">
+                <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                  <Code className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-serif font-semibold text-foreground">
+                  <h3 className="font-sans font-semibold text-foreground">
                     Desenvolvedor Web
                   </h3>
                   <p className="text-sm text-muted-foreground font-sans">
@@ -49,12 +49,12 @@ const About = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 p-4 bg-secondary/50 rounded-lg">
-                <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                  <Briefcase className="w-5 h-5 text-accent" />
+              <div className="flex items-start gap-4 p-4 glass-card">
+                <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                  <Briefcase className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-serif font-semibold text-foreground">
+                  <h3 className="font-sans font-semibold text-foreground">
                     Sites Jurídicos
                   </h3>
                   <p className="text-sm text-muted-foreground font-sans">
@@ -63,12 +63,12 @@ const About = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 p-4 bg-secondary/50 rounded-lg">
-                <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                  <Users className="w-5 h-5 text-accent" />
+              <div className="flex items-start gap-4 p-4 glass-card">
+                <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                  <Users className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-serif font-semibold text-foreground">
+                  <h3 className="font-sans font-semibold text-foreground">
                     Sistemas de Agendamento
                   </h3>
                   <p className="text-sm text-muted-foreground font-sans">

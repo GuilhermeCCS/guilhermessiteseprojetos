@@ -1,10 +1,7 @@
-@import "@fontsource/playfair-display/400.css";
-@import "@fontsource/playfair-display/500.css";
-@import "@fontsource/playfair-display/600.css";
-@import "@fontsource/playfair-display/700.css";
 @import "@fontsource/inter/400.css";
 @import "@fontsource/inter/500.css";
 @import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
 
 @tailwind base;
 @tailwind components;
@@ -12,95 +9,57 @@
 
 @layer base {
   :root {
-    /* Navy & Elegant Theme */
-    --background: 0 0% 100%;
-    --foreground: 220 30% 15%;
+    /* Tech Modern Dark Theme */
+    --background: 222 47% 6%;
+    --foreground: 210 20% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 30% 15%;
+    --card: 222 47% 8%;
+    --card-foreground: 210 20% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 30% 15%;
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 20% 95%;
 
-    /* Deep Navy Blue */
-    --primary: 220 50% 15%;
-    --primary-foreground: 0 0% 100%;
+    /* Cyber Blue Primary */
+    --primary: 199 89% 48%;
+    --primary-foreground: 222 47% 6%;
 
-    /* Warm gray */
-    --secondary: 220 10% 96%;
-    --secondary-foreground: 220 30% 15%;
+    /* Dark Gray Secondary */
+    --secondary: 222 30% 14%;
+    --secondary-foreground: 210 20% 95%;
 
-    --muted: 220 10% 94%;
-    --muted-foreground: 220 10% 45%;
+    --muted: 222 30% 18%;
+    --muted-foreground: 210 10% 60%;
 
-    /* Muted Gold/Bronze accent */
-    --accent: 38 35% 50%;
-    --accent-foreground: 0 0% 100%;
+    /* Neon Accent (Cyan/Electric Blue) */
+    --accent: 180 70% 50%;
+    --accent-foreground: 222 47% 6%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 15% 88%;
-    --input: 220 15% 88%;
-    --ring: 38 35% 50%;
+    --border: 222 30% 18%;
+    --input: 222 30% 18%;
+    --ring: 199 89% 48%;
 
-    --radius: 0.25rem;
+    --radius: 0.5rem;
 
-    /* Custom colors for the theme */
-    --navy: 220 50% 12%;
-    --navy-light: 220 45% 18%;
-    --charcoal: 220 15% 25%;
-    --gold: 38 35% 50%;
-    --gold-light: 38 40% 60%;
-    --cream: 40 20% 97%;
+    /* Custom Tech Theme Colors */
+    --dark-bg: 222 47% 4%;
+    --dark-surface: 222 47% 8%;
+    --dark-elevated: 222 30% 12%;
+    --cyber-blue: 199 89% 48%;
+    --cyber-blue-glow: 199 89% 60%;
+    --neon-purple: 270 70% 60%;
+    --tech-gray: 210 10% 40%;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 220 50% 8%;
-    --foreground: 0 0% 95%;
-
-    --card: 220 50% 10%;
-    --card-foreground: 0 0% 95%;
-
-    --popover: 220 50% 10%;
-    --popover-foreground: 0 0% 95%;
-
-    --primary: 38 35% 50%;
-    --primary-foreground: 220 50% 8%;
-
-    --secondary: 220 40% 15%;
-    --secondary-foreground: 0 0% 95%;
-
-    --muted: 220 40% 18%;
-    --muted-foreground: 220 10% 65%;
-
-    --accent: 38 35% 55%;
-    --accent-foreground: 220 50% 8%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 95%;
-
-    --border: 220 40% 20%;
-    --input: 220 40% 20%;
-    --ring: 38 35% 50%;
-
-    --sidebar-background: 220 50% 10%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 38 35% 50%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 40% 15%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 220 40% 20%;
-    --sidebar-ring: 38 35% 50%;
+    --sidebar-background: 222 47% 6%;
+    --sidebar-foreground: 210 20% 95%;
+    --sidebar-primary: 199 89% 48%;
+    --sidebar-primary-foreground: 222 47% 6%;
+    --sidebar-accent: 222 30% 14%;
+    --sidebar-accent-foreground: 210 20% 95%;
+    --sidebar-border: 222 30% 18%;
+    --sidebar-ring: 199 89% 48%;
   }
 }
 
@@ -118,21 +77,33 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif;
+    @apply font-sans font-semibold;
   }
 }
 
 @layer components {
   .section-title {
-    @apply text-3xl md:text-4xl font-serif font-semibold text-foreground tracking-tight;
+    @apply text-3xl md:text-4xl font-sans font-bold text-foreground tracking-tight;
   }
 
-  .gold-divider {
-    @apply w-16 h-0.5 bg-accent mx-auto my-6;
+  .cyber-divider {
+    @apply w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto my-6 rounded-full;
   }
 
   .text-balance {
     text-wrap: balance;
+  }
+
+  .glass-card {
+    @apply bg-card/50 backdrop-blur-lg border border-primary/20 rounded-xl;
+  }
+
+  .glow-text {
+    text-shadow: 0 0 20px hsl(var(--primary) / 0.5), 0 0 40px hsl(var(--primary) / 0.3);
+  }
+
+  .glow-border {
+    box-shadow: 0 0 15px hsl(var(--primary) / 0.3), inset 0 0 15px hsl(var(--primary) / 0.1);
   }
 }
 

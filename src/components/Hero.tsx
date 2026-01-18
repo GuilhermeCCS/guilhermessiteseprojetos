@@ -14,28 +14,28 @@ const Hero = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
-        <div className="absolute inset-0 bg-navy/70" />
+        <div className="absolute inset-0 bg-background/60 backdrop-blur-[2px]" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 lg:px-8 text-center">
         <div className="max-w-3xl mx-auto animate-fade-in-up">
-          {/* Gold accent line */}
-          <div className="w-16 h-0.5 bg-gold mx-auto mb-8" />
+          {/* Tech accent line */}
+          <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8 rounded-full" />
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-primary-foreground mb-6 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold text-foreground mb-6 leading-tight">
             Desenvolvimento Web
             <br />
-            <span className="text-gold">de Alto Padrão</span>
+            <span className="text-primary glow-text">de Alto Padrão</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-primary-foreground/80 mb-10 max-w-2xl mx-auto font-sans leading-relaxed">
+          <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto font-sans leading-relaxed">
             Soluções digitais profissionais que transformam sua presença online 
             em resultados concretos para seu negócio.
           </p>
 
           <Button
-            variant="gold"
+            variant="cyber"
             size="lg"
             asChild
           >
@@ -47,8 +47,8 @@ const Hero = () => {
 
         {/* Scroll indicator */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-float">
-          <div className="w-6 h-10 border-2 border-gold/50 rounded-full flex justify-center pt-2">
-            <div className="w-1 h-3 bg-gold rounded-full animate-pulse" />
+          <div className="w-6 h-10 border-2 border-primary/50 rounded-full flex justify-center pt-2">
+            <div className="w-1 h-3 bg-primary rounded-full animate-pulse" />
           </div>
         </div>
       </div>
