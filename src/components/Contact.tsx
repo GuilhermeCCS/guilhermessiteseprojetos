@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Mail, MapPin } from "lucide-react";
+import { MessageCircle, Mail, MapPin, Instagram, ArrowRight } from "lucide-react";
 
 const WHATSAPP_URL = "https://wa.me/5582991301991?text=Ol%C3%A1!%20vim%20atrav%C3%A9s%20do%20seu%20site%2C%20gostaria%20de%20falar%20com%20um%20especialista";
 const EMAIL_URL = "mailto:guilhermecru463@gmail.com";
+const INSTAGRAM_URL = "https://www.instagram.com/guilhermessiteseprojetos/";
 
 const Contact = () => {
   return (
@@ -20,12 +21,12 @@ const Contact = () => {
           </div>
 
           {/* Contact Options */}
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-4 gap-6 mb-12">
             <a 
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-center p-6 glass-card hover:border-primary/50 transition-all duration-300 group cursor-pointer"
+              className="text-center p-6 glass-card hover:border-primary/50 transition-all duration-300 group cursor-pointer hover:scale-105"
             >
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
                 <MessageCircle className="w-6 h-6 text-primary" />
@@ -40,7 +41,7 @@ const Contact = () => {
 
             <a 
               href={EMAIL_URL}
-              className="text-center p-6 glass-card hover:border-primary/50 transition-all duration-300 group cursor-pointer"
+              className="text-center p-6 glass-card hover:border-primary/50 transition-all duration-300 group cursor-pointer hover:scale-105"
             >
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
                 <Mail className="w-6 h-6 text-primary" />
@@ -50,6 +51,23 @@ const Contact = () => {
               </h3>
               <p className="text-sm text-muted-foreground font-sans">
                 guilhermecru463@gmail.com
+              </p>
+            </a>
+
+            <a 
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-center p-6 glass-card hover:border-primary/50 transition-all duration-300 group cursor-pointer hover:scale-105"
+            >
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                <Instagram className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="font-sans font-semibold text-foreground mb-2">
+                Instagram
+              </h3>
+              <p className="text-sm text-muted-foreground font-sans">
+                @guilhermessiteseprojetos
               </p>
             </a>
 
@@ -72,10 +90,12 @@ const Contact = () => {
               variant="cyber"
               size="lg"
               asChild
+              className="group"
             >
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-5 h-5 mr-2" />
-                Fale pelo WhatsApp
+                Solicite um Orçamento
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
             <Button
