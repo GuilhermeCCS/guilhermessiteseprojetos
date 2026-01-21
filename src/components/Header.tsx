@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { Menu, X, Instagram } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 
 const WHATSAPP_URL = "https://wa.me/5582991301991?text=Ol%C3%A1!%20vim%20atrav%C3%A9s%20do%20seu%20site%2C%20gostaria%20de%20falar%20com%20um%20especialista";
-const INSTAGRAM_URL = "https://www.instagram.com/guilhermessiteseprojetos/";
 
 const navItems = [
   { label: "Início", href: "#inicio" },
@@ -49,15 +48,6 @@ const Header = () => {
 
           {/* Desktop Actions */}
           <div className="hidden lg:flex items-center gap-4">
-            <a
-              href={INSTAGRAM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
-              aria-label="Instagram"
-            >
-              <Instagram className="w-5 h-5" />
-            </a>
             <Button variant="cyber" size="default" asChild>
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                 Solicite um Orçamento
@@ -89,17 +79,8 @@ const Header = () => {
                   {item.label}
                 </a>
               ))}
-              <div className="flex items-center gap-4 pt-4 border-t border-primary/20">
-                <a
-                  href={INSTAGRAM_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-                  aria-label="Instagram"
-                >
-                  <Instagram className="w-5 h-5" />
-                </a>
-                <Button variant="cyber" size="sm" asChild className="flex-1">
+              <div className="pt-4 border-t border-primary/20">
+                <Button variant="cyber" size="sm" asChild className="w-full">
                   <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                     Solicite um Orçamento
                   </a>

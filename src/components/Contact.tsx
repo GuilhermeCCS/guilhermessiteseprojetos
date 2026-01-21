@@ -1,15 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Mail, MapPin, Instagram, ArrowRight } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const WHATSAPP_URL = "https://wa.me/5582991301991?text=Ol%C3%A1!%20vim%20atrav%C3%A9s%20do%20seu%20site%2C%20gostaria%20de%20falar%20com%20um%20especialista";
 const EMAIL_URL = "mailto:guilhermecru463@gmail.com";
 const INSTAGRAM_URL = "https://www.instagram.com/guilhermessiteseprojetos/";
 
 const Contact = () => {
+  const { ref, isVisible } = useScrollAnimation();
+
   return (
     <section id="contato" className="py-24 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="max-w-4xl mx-auto">
+        <div ref={ref} className={`max-w-4xl mx-auto scroll-fade-in ${isVisible ? 'visible' : ''}`}>
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="section-title mb-4">Entre em Contato</h2>
@@ -49,7 +52,7 @@ const Contact = () => {
               <h3 className="font-sans font-semibold text-foreground mb-2">
                 E-mail
               </h3>
-              <p className="text-sm text-muted-foreground font-sans">
+              <p className="text-xs text-muted-foreground font-sans break-all">
                 guilhermecru463@gmail.com
               </p>
             </a>
