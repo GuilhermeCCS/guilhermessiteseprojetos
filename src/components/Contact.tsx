@@ -24,12 +24,12 @@ const Contact = () => {
           </div>
 
           {/* Contact Options */}
-          <div className="grid md:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12">
             <a 
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-center p-6 glass-card hover:border-primary/50 transition-all duration-300 group cursor-pointer hover:scale-105"
+              className="text-center p-4 md:p-6 glass-card hover:border-primary/50 transition-all duration-300 group cursor-pointer hover:scale-105"
             >
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
                 <MessageCircle className="w-6 h-6 text-primary" />
@@ -37,14 +37,14 @@ const Contact = () => {
               <h3 className="font-sans font-semibold text-foreground mb-2">
                 WhatsApp
               </h3>
-              <p className="text-sm text-muted-foreground font-sans">
+              <p className="text-xs md:text-sm text-muted-foreground font-sans">
                 (82) 99130-1991
               </p>
             </a>
 
             <a 
               href={EMAIL_URL}
-              className="text-center p-6 glass-card hover:border-primary/50 transition-all duration-300 group cursor-pointer hover:scale-105"
+              className="text-center p-4 md:p-6 glass-card hover:border-primary/50 transition-all duration-300 group cursor-pointer hover:scale-105"
             >
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
                 <Mail className="w-6 h-6 text-primary" />
@@ -52,7 +52,7 @@ const Contact = () => {
               <h3 className="font-sans font-semibold text-foreground mb-2">
                 E-mail
               </h3>
-              <p className="text-xs text-muted-foreground font-sans break-all">
+              <p className="text-[10px] md:text-xs text-muted-foreground font-sans whitespace-nowrap">
                 guilhermecru463@gmail.com
               </p>
             </a>
@@ -61,7 +61,7 @@ const Contact = () => {
               href={INSTAGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-center p-6 glass-card hover:border-primary/50 transition-all duration-300 group cursor-pointer hover:scale-105"
+              className="text-center p-4 md:p-6 glass-card hover:border-primary/50 transition-all duration-300 group cursor-pointer hover:scale-105"
             >
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
                 <Instagram className="w-6 h-6 text-primary" />
@@ -69,19 +69,19 @@ const Contact = () => {
               <h3 className="font-sans font-semibold text-foreground mb-2">
                 Instagram
               </h3>
-              <p className="text-sm text-muted-foreground font-sans">
+              <p className="text-[10px] md:text-xs text-muted-foreground font-sans whitespace-nowrap">
                 @guilhermessiteseprojetos
               </p>
             </a>
 
-            <div className="text-center p-6 glass-card">
+            <div className="text-center p-4 md:p-6 glass-card">
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-6 h-6 text-primary" />
               </div>
               <h3 className="font-sans font-semibold text-foreground mb-2">
                 Localização
               </h3>
-              <p className="text-sm text-muted-foreground font-sans">
+              <p className="text-xs md:text-sm text-muted-foreground font-sans">
                 Alagoas, Brasil
               </p>
             </div>
