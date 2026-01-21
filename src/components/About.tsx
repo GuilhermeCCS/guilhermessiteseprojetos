@@ -1,10 +1,16 @@
 import { Code, Users, Briefcase } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const About = () => {
+  const { ref, isVisible } = useScrollAnimation();
+
   return (
     <section id="sobre" className="py-24 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="max-w-4xl mx-auto">
+        <div 
+          ref={ref} 
+          className={`max-w-4xl mx-auto scroll-fade-in ${isVisible ? 'visible' : ''}`}
+        >
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="section-title mb-4">Quem Sou</h2>

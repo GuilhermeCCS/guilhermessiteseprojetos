@@ -1,5 +1,6 @@
 import { Globe, Calendar, Scale, Smartphone } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const services = [
   {
@@ -29,22 +30,25 @@ const services = [
 ];
 
 const Services = () => {
+  const { ref, isVisible } = useScrollAnimation();
+
   return (
     <section id="servicos" className="py-24 bg-secondary">
       <div className="container mx-auto px-4 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="section-title mb-4">
-            Serviços
-          </h2>
-          <div className="cyber-divider" />
-          <p className="text-muted-foreground max-w-2xl mx-auto font-sans">
-            Soluções digitais personalizadas para atender às necessidades específicas do seu negócio
-          </p>
-        </div>
+        <div ref={ref} className={`scroll-fade-in ${isVisible ? 'visible' : ''}`}>
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="section-title mb-4">
+              Serviços
+            </h2>
+            <div className="cyber-divider" />
+            <p className="text-muted-foreground max-w-2xl mx-auto font-sans">
+              Soluções digitais personalizadas para atender às necessidades específicas do seu negócio
+            </p>
+          </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          {/* Services Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {services.map((service, index) => (
             <Card
               key={index}
@@ -65,6 +69,7 @@ const Services = () => {
               </CardContent>
             </Card>
           ))}
+          </div>
         </div>
       </div>
     </section>
