@@ -29,7 +29,7 @@ const Header = () => {
               />
             </div>
             <span className="text-foreground font-sans text-lg md:text-xl font-semibold tracking-wide">
-              Guilherme S Sites e Projetos
+              Silva Soluções Web
             </span>
           </a>
 

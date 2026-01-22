@@ -21,7 +21,7 @@ const Footer = () => {
               />
             </div>
             <span className="text-foreground font-sans text-lg font-semibold tracking-wide">
-              Guilherme S Sites e Projetos
+              Silva Soluções Web
             </span>
           </div>
 
@@ -57,7 +57,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <p className="text-muted-foreground text-sm font-sans text-center">
-            © {currentYear} Guilherme S Sites e Projetos. Todos os direitos reservados.
+            © {currentYear} Silva Soluções Web. Todos os direitos reservados.
           </p>
         </div>
       </div>
