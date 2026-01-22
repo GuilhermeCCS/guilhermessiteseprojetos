@@ -54,7 +54,7 @@ const ParticlesBackground = () => {
         if (!ctx) return;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(14, 165, 233, ${this.opacity})`;
+        ctx.fillStyle = `rgba(45, 106, 79, ${this.opacity})`;
         ctx.fill();
       }
     }
